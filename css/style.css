@@ -1,0 +1,184 @@
+:root {
+  /* Primary colors */
+  --clr-pale-blue: hsl(225,100%, 94%);
+  --clr-bright-blue: hsl(245, 75%, 52%);
+  /* Neutral colors */
+  --clr-very-pale-blue: hsl(225,100%, 98%);
+  --clr-desat-blue: hsl(224,23% ,55%);
+  --clr-dark-blue: hsl(223, 47%, 23%);
+}
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: 0;
+          box-sizing: 0;
+}
+
+button {
+  font-family: "Red Hat Display", sans-serif;
+  cursor: pointer;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  background: var(--clr-pale-blue);
+  font-family: "Red Hat Display", sans-serif;
+}
+
+.bg-image {
+  background: url("../images/pattern-background-mobile.svg") no-repeat center/cover;
+  height: 50vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.container {
+  width: 300px;
+  margin: 0 auto;
+  background: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 1rem;
+  overflow: hidden;
+  text-align: center;
+}
+
+.container img {
+  width: 100%;
+  height: auto;
+}
+
+.container .inner-container {
+  width: 90%;
+}
+
+.container .inner-container h1 {
+  font-size: 1.3rem;
+  padding: 2rem 3rem 1rem 3rem;
+  color: var(--clr-dark-blue);
+  font-weight: 900;
+}
+
+.container .inner-container p {
+  line-height: 1.7;
+  color: var(--clr-desat-blue);
+  font-weight: 500;
+  font-size: .9rem;
+}
+
+.container .inner-container .plan-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: var(--clr-very-pale-blue);
+  border-radius: 1rem;
+  padding-block: 1rem;
+  margin-block: 1.5rem;
+}
+
+.container .inner-container .plan-container .sub-plan {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 1rem;
+}
+
+.container .inner-container .plan-container .plan-price {
+  padding-left: 1rem;
+}
+
+.container .inner-container .plan-container h2 {
+  font-size: .9rem;
+  color: var(--clr-dark-blue);
+  font-weight: 900;
+}
+
+.container .inner-container .plan-container p {
+  font-size: .9rem;
+  font-weight: 500;
+  color: var(--clr-desat-blue);
+  padding: unset;
+}
+
+.container .inner-container .plan-container .btn-change {
+  border: none;
+  background: transparent;
+  text-decoration: underline;
+  color: var(--clr-bright-blue);
+  font-weight: 700;
+  margin-right: 1rem;
+  font-size: .8rem;
+  -webkit-transition: opacity .4s ease;
+  transition: opacity .4s ease;
+}
+
+.container .inner-container .plan-container .btn-change:hover {
+  opacity: .7;
+}
+
+.container .inner-container .btn-payment, .container .inner-container .btn-cancel {
+  width: 100%;
+  font-weight: 900;
+  padding: .9rem;
+  border: none;
+  border-radius: 1rem;
+  margin-bottom: .5rem;
+}
+
+.container .inner-container .btn-payment {
+  background-color: var(--clr-bright-blue);
+  color: var(--clr-very-pale-blue);
+  -webkit-box-shadow: 0px 10px 15px -5px rgba(56, 84, 153, 0.404);
+          box-shadow: 0px 10px 15px -5px rgba(56, 84, 153, 0.404);
+  -webkit-transition: opacity .4s ease;
+  transition: opacity .4s ease;
+}
+
+.container .inner-container .btn-payment:hover {
+  opacity: .7;
+}
+
+.container .inner-container .btn-cancel {
+  background: none;
+  color: var(--clr-desat-blue);
+  -webkit-transition: color .4s ease;
+  transition: color .4s ease;
+}
+
+.container .inner-container .btn-cancel:hover {
+  color: var(--clr-dark-blue);
+}
+
+@media only screen and (min-width: 768px) {
+  .bg-image {
+    background: url("../images/pattern-background-desktop.svg") no-repeat center/cover;
+    height: 70vh;
+  }
+}
+/*# sourceMappingURL=style.css.map */
